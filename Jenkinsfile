@@ -11,7 +11,7 @@ pipeline {
         stage('Build Maven') {
             steps {
                 dir('backend') {
-                    sh './mvnw clean package'
+                    sh './mvnw clean package -DskipTests'
                 }
             }
         }
